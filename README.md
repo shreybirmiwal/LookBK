@@ -120,16 +120,36 @@ For each color option, extract price, sizing information, etc and return in JSON
 ```
 
 ## Questions
-1. **Scaling**:
-    - How would you modify the scraper to handle a large number of URLs efficiently?
-      First, I would keep a database "cache" of popular items so they do not need to be scraped again. I would also  
-    - What techniques would you use to distribute the workload across multiple machines?
-2. **Monitoring**:
-    - How would you monitor the scraper's performance and ensure it is running smoothly?
-    - What tools or services would you use for monitoring?
-3. **Debugging**:
-    - What strategies would you employ to debug issues with the scraper?
-    - How would you handle and log errors encountered during scraping?
-4. **Other Considerations**:
-    - What other questions or potential issues would you need to explore before implementing a large-scale scraping solution?
-    - What are some alternative approaches for extracting data from sites that may be more robust?
+
+**Scaling**:
+```
+1. How would you modify the scraper to handle a large number of URLs efficiently?
+First, I would keep a database "cache" of popular items so they do not need to be scraped again. I would also process them in parallel whilst keeping a list of successes, failures, and resulted scraped data.
+
+2. What techniques would you use to distribute the workload across multiple machines?
+A centralized list of tasks (items to scrape) can be kept and delegated through different cloud functions. A central server can store the results of the datascrape.
+```
+**Monitoring**:
+```
+1. How would you monitor the scraper's performance and ensure it is running smoothly?
+The central database will store all the past scraped data. It can also store which ones had errors and what the error was. From this, a list of stats can be generated with a simple script such as performance, hit rate, cache hit rate, etc
+
+2. What tools or services would you use for monitoring?
+I would (through script) save all the links that led to an error in a separate CSV. Then, I would use the perplexity api or some other website scraper api in order to sort the issue. The script would compare for example a screenshot of the website and the returned output. EI: [404 page] compared with {error: item_out_of_stock} will be flagged for manual review since the errors don't match up.
+```
+**Debugging**:
+```
+1.What strategies would you employ to debug issues with the scraper?
+First, a manual review to see why the item was 'special' or different to cause the error. Then, examine what part of code excludes said edge case.
+
+2.How would you handle and log errors encountered during scraping?
+Currently, in the code you can see many 'try catch' blocks which help make sure if an error occurs the script can still proceed. This is key because if it was processing 1,000,000 items, and on the last few items failed, then all of your data could go to waste without the try-catch block. In addition, you can also see in the code checks to see if the product is not a broken link.
+```
+**Other Considerations**:
+```
+1. What other questions or potential issues would you need to explore before implementing a large-scale scraping solution?    
+Rate limiting and IP blockching are the primary issues. To solve these, I think using rotating proxys could work. In addition, could try different web drivers with different headers (not just selenium)
+
+2. What are some alternative approaches for extracting data from sites that may be more robust?
+Can try some API's like this: https://rapidapi.com/axesso/api/axesso-walmart-data-service/playground/apiendpoint_15d12e8f-bbdf-473a-bed3-41c637b78feb (walmart API), or the Amazon API (which has products from Nike, etc). Can also try to partner with a few stores to get more data.
+```
