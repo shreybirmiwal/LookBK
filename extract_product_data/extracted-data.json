@@ -1,21 +1,45 @@
 {
-    "name": "Fierce Night Cologne",
+    "name": "London Graphic Tee",
     "options": [
         {
-            "color": "1.7 Oz",
+            "color": "Off White",
             "image_urls": [
-                "https://img.abercrombie.com/is/image/anf/KIC_164-2500-0213-900_prod1.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_164-2500-0213-900_prod2.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_164-2500-0213-900_life1.jpg?policy=product-large"
+                "https://img.abercrombie.com/is/image/anf/KIC_123-4057-0109-101_model1.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_123-4057-0109-101_model2.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_123-4057-0109-101_model3.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_123-4057-0109-101_model4.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_123-4057-0109-101_prod1.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_123-4057-0109-101_prod2.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_123-4057-0109-101_prod3.jpg?policy=product-large"
             ],
             "sizes_primary": [
                 {
-                    "size": "ONE SIZE_p",
+                    "size": "XS_p",
+                    "inStock": false
+                },
+                {
+                    "size": "S_p",
+                    "inStock": false
+                },
+                {
+                    "size": "M_p",
+                    "inStock": false
+                },
+                {
+                    "size": "L_p",
+                    "inStock": false
+                },
+                {
+                    "size": "XL_p",
+                    "inStock": false
+                },
+                {
+                    "size": "XXL_p",
                     "inStock": true
                 }
             ],
             "sizes_secondary": [],
-            "price": "$58"
+            "price": "$29"
         }
     ]
 }

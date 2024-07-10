@@ -172,17 +172,19 @@ def test():
 
 
 
-    #non clothing item
-    runMain(["https://www.abercrombie.com/shop/us/p/fierce-night-cologne-42183319?categoryId=12232&faceout=prod&seq=02"])
-    with open('extracted-data.json', 'r') as file:
-        print([json.loads(line) for line in file])
+    # #non clothing item
+    # runMain(["https://www.abercrombie.com/shop/us/p/fierce-night-cologne-42183319?categoryId=12232&faceout=prod&seq=02"])
+    # with open('extracted-data.json', 'r') as file:
+    #     print([json.loads(line) for line in file])
+
+    return
 
 
 
 if __name__ == "__main__":
 
-    #runMode = "main"
-    runMode = "test"
+    runMode = "main"
+    # runMode = "test"
 
     if runMode == "test":
         test()
