@@ -1,118 +1,21 @@
 {
-    "name": "Relaxed Thrift-Inspired Fleece Short",
+    "name": "Fierce Night Cologne",
     "options": [
         {
-            "color": "Dark Olive Green",
+            "color": "1.7 Oz",
             "image_urls": [
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-0029-333_prod1.jpg?policy=product-small",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-0029-333_prod2.jpg?policy=product-small",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-0029-333_prod1.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-0029-333_prod2.jpg?policy=product-large"
+                "https://img.abercrombie.com/is/image/anf/KIC_164-2500-0213-900_prod1.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_164-2500-0213-900_prod2.jpg?policy=product-large",
+                "https://img.abercrombie.com/is/image/anf/KIC_164-2500-0213-900_life1.jpg?policy=product-large"
             ],
             "sizes_primary": [
                 {
-                    "size": "XS_p",
-                    "inStock": true
-                },
-                {
-                    "size": "S_p",
-                    "inStock": true
-                },
-                {
-                    "size": "M_p",
-                    "inStock": true
-                },
-                {
-                    "size": "L_p",
-                    "inStock": true
-                },
-                {
-                    "size": "XL_p",
-                    "inStock": true
-                },
-                {
-                    "size": "XXL_p",
+                    "size": "ONE SIZE_p",
                     "inStock": true
                 }
             ],
             "sizes_secondary": [],
-            "price": "$50"
-        },
-        {
-            "color": "Black",
-            "image_urls": [
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-903_prod1.jpg?policy=product-small",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-903_prod2.jpg?policy=product-small",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-903_prod1.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-903_prod2.jpg?policy=product-large"
-            ],
-            "sizes_primary": [
-                {
-                    "size": "XS_p",
-                    "inStock": true
-                },
-                {
-                    "size": "S_p",
-                    "inStock": true
-                },
-                {
-                    "size": "M_p",
-                    "inStock": true
-                },
-                {
-                    "size": "L_p",
-                    "inStock": true
-                },
-                {
-                    "size": "XL_p",
-                    "inStock": true
-                },
-                {
-                    "size": "XXL_p",
-                    "inStock": true
-                }
-            ],
-            "sizes_secondary": [],
-            "price": "$50"
-        },
-        {
-            "color": "Light Brown",
-            "image_urls": [
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-403_model1.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-403_model2.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-403_model3.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-403_model4.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-403_model5.jpg?policy=product-large",
-                "https://img.abercrombie.com/is/image/anf/KIC_128-4127-00029-403_prod1.jpg?policy=product-large"
-            ],
-            "sizes_primary": [
-                {
-                    "size": "XS_p",
-                    "inStock": true
-                },
-                {
-                    "size": "S_p",
-                    "inStock": true
-                },
-                {
-                    "size": "M_p",
-                    "inStock": true
-                },
-                {
-                    "size": "L_p",
-                    "inStock": true
-                },
-                {
-                    "size": "XL_p",
-                    "inStock": true
-                },
-                {
-                    "size": "XXL_p",
-                    "inStock": true
-                }
-            ],
-            "sizes_secondary": [],
-            "price": "$50"
+            "price": "$58"
         }
     ]
 }

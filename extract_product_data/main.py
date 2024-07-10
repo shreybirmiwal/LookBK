@@ -26,7 +26,7 @@ def getImageSizes(driver):
 
 
 
-    #               primary sizes of the clothes WORKING
+    #primary sizes of the clothes WORKING
     sizes_primary = []
     sizes_primary_elements = driver.find_element(By.CLASS_NAME, r"product-sizes_primary-mfe")
     input_elements = sizes_primary_elements.find_elements(By.TAG_NAME, "input")
@@ -47,7 +47,7 @@ def getImageSizes(driver):
 
 
 
-    # senocndary
+    # senocndary sizes
     sizes_secondary = []
 
     try:
@@ -97,7 +97,11 @@ def extractData(driver, link):
 
     time.sleep(5)
 
-    name = driver.execute_script("return document.querySelector('.name-and-description-container h1').textContent")
+    try:
+        name = driver.execute_script("return document.querySelector('.name-and-description-container h1').textContent")
+    except Exception as e:
+        return {"error": "Error retrieving product name"}
+ 
 
     options_store = []
     try:
@@ -127,12 +131,9 @@ def extractData(driver, link):
     
 
 
-def main():
+def runMain(links):
     driver = webdriver.Chrome()
     driver.fullscreen_window()
-    links = ["https://www.abercrombie.com/shop/us/p/emerson-linen-blend-skort-56256822?categoryId=12265&faceout=life&seq=06",
-            "https://www.abercrombie.com/shop/us/p/thrift-inspired-fleece-short-54674832?categoryId=6570710&faceout=model&seq=01"
-            ]
 
     extractedData = []
 
@@ -148,5 +149,49 @@ def main():
             file.write('\n')
 
 
+def test():
+    
+    # #BROKEN LINK TEST
+    # runMain(["https://www.abercrombie.com/shop/us/p/geometric-johssnny-collar-sweater-polo-55767820?categoryId=12835&faceout=model&seq=01"])
+    # with open('extracted-data.json', 'r') as file:
+    #     print([json.loads(line) for line in file])
+
+
+
+    # #Single sized item
+    # runMain(["https://www.abercrombie.com/shop/us/p/paris-graphic-tee-55948319?categoryId=6570709&faceout=model&seq=02"])
+    # with open('extracted-data.json', 'r') as file:
+    #     print([json.loads(line) for line in file])
+
+
+
+    # #Size, color, and length options
+    # runMain(["https://www.abercrombie.com/shop/us/p/curve-love-high-rise-90s-relaxed-jean-57118327?categoryId=12261&faceout=model&seq=01"])
+    # with open('extracted-data.json', 'r') as file:
+    #     print([json.loads(line) for line in file])
+
+
+
+    #non clothing item
+    runMain(["https://www.abercrombie.com/shop/us/p/fierce-night-cologne-42183319?categoryId=12232&faceout=prod&seq=02"])
+    with open('extracted-data.json', 'r') as file:
+        print([json.loads(line) for line in file])
+
+
+
 if __name__ == "__main__":
-    main()
+
+    #runMode = "main"
+    runMode = "test"
+
+    if runMode == "test":
+        test()
+    else:
+        #run main
+        links = ["https://www.abercrombie.com/shop/us/p/emerson-linen-blend-skort-56256822?categoryId=12265&faceout=life&seq=06",
+            "https://www.abercrombie.com/shop/us/p/thrift-inspired-fleece-short-54674832?categoryId=6570710&faceout=model&seq=01"
+            ]
+        runMain(links)
+
+
+

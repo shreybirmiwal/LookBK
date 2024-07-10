@@ -1,4 +1,4 @@
-# LookBK
+## LookBK
 
 Web scraped Abercrombie website and returns in JSON format
 
@@ -7,7 +7,11 @@ Web scraped Abercrombie website and returns in JSON format
 Webscrapes every for-sale item listed on website
 
 2. extract_product_data
-Given a link to a specific product, scrape product info and return in JSON## Run Locally
+Given a link to a specific product, scrape product info and return in JSON
+
+
+
+## How to run locally:
 
 extract_all_products:
 ```bash
